@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.container {
+    animation: bg-gradient 15s infinite ease;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2em;
+    width: 50vw;
+}
+
+.todo-app h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.row {
+    border-radius: 10px;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 2em;
+}
+
+.row input {
+    width: 90%;
+    border-radius: 30px;
+    border: none;
+    height: 35px;
+    background-color: rgba(128, 128, 128, 0.408);
+    padding: 0em .5em;
+}
+.row button {
+    width: 11%;
+    border-radius: 20px;
+    margin-left: -2.5em;
+    border: none;
+    height: 35px;
+    background-color: #ff5945;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+ul {
+    width: 100%;
+}
+ul li {
+    width: 100%;
+    list-style: none;
+    font-size: 1em;
+    padding: 10px 10px 15px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    overflow-y: hidden;
+    white-space: unset;
+}
+ul li::before {
+    content: " ";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(/Assets/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked {
+    transition: all 0.5s;
+    color: #979797;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    transition: all 0.5s;
+    background-image: url(/Assets/images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 60px;
+    top: 1px;
+    width: 40px;
+    height: 40px;
+    color: #696969;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+ul li span:hover {
+    background: #EDEEF0;
+    box-shadow: inset 10px 10px 5px #696969;
+    color: #00358a;
+}
+
+
+@media screen and (max-width:576px) {
+    .todo-app {
+        width: 70vw;
+    }
+    .todo-app h1 {
+        font-size: 2.5em;
+    }
+    .row input {
+        width: 70%;
+    }
+    .row button {
+        width: 33%;
+    }
+    ul li {
+        font-size: 1em;
+    }
+    ul li::before {
+        top: 7px;
+    }
+    ul li span {
+        top: 2px;
+    }
+}
+@keyframes bg-gradient {
+    0% {
+        background: linear-gradient(0deg, #03f05a 50%, #0073ff);
+    }
+
+    25% {
+        background: linear-gradient(45deg, #03f05a 25%, #0073ff);
+    }
+
+    50% {
+        background: linear-gradient(90deg, #03f05a 50%, #0073ff);
+    }
+
+    75% {
+        background: linear-gradient(135deg, #03f05a 25%, #0073ff);
+    }
+
+    100% {
+        background: linear-gradient(180deg, #03f05a 50%, #0073ff);
+    }
+}
