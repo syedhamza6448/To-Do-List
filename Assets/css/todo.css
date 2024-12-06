@@ -75,7 +75,7 @@ ul li::before {
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    background-image: url(/Assets/images/unchecked.png);
+    background-image: url(https://github.com/syedhamza6448/To-Do-List/blob/main/Assets/images/unchecked.png?raw=true);
     background-size: cover;
     background-position: center;
     top: 8px;
@@ -88,7 +88,7 @@ ul li.checked {
 }
 ul li.checked::before {
     transition: all 0.5s;
-    background-image: url(/Assets/images/checked.png);
+    background-image: url(https://github.com/syedhamza6448/To-Do-List/blob/main/Assets/images/checked.png?raw=true);
 }
 ul li span {
     position: absolute;
