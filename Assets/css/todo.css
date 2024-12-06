@@ -5,7 +5,7 @@
 }
 
 .container {
-    animation: bg-gradient 15s infinite ease;
+    background: linear-gradient(135deg, #006aff 20%, #4700a4 80%);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -130,26 +130,5 @@ ul li span:hover {
     }
     ul li span {
         top: 2px;
-    }
-}
-@keyframes bg-gradient {
-    0% {
-        background: linear-gradient(0deg, #03f05a 50%, #0073ff);
-    }
-
-    25% {
-        background: linear-gradient(45deg, #03f05a 25%, #0073ff);
-    }
-
-    50% {
-        background: linear-gradient(90deg, #03f05a 50%, #0073ff);
-    }
-
-    75% {
-        background: linear-gradient(135deg, #03f05a 25%, #0073ff);
-    }
-
-    100% {
-        background: linear-gradient(180deg, #03f05a 50%, #0073ff);
     }
 }
